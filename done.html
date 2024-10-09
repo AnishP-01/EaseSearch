@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Placement</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #order-form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      position: relative;
+    }
+
+    #order-success {
+      display: none;
+      color: #28a745;
+      font-size: 18px;
+      margin-top: 20px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    #order-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #order-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div id="order-form">
+    <h2>Place Your Order</h2>
+    <button id="order-button" onclick="placeOrder()">Place Order</button>
+    <div id="order-success">Your order has been placed!</div>
+  </div>
+
+  <script>
+    function placeOrder() {
+      // Simulate order placement (in a real scenario, you would send a request to a server)
+      setTimeout(() => {
+        document.getElementById('order-button').style.display = 'none';
+        document.getElementById('order-success').style.display = 'block';
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

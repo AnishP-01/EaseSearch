@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url('https://img.freepik.com/free-photo/finance-elements-frame_23-2148080960.jpg?w=740&t=st=1699190511~exp=1699191111~hmac=aecdf65f6adca7c464017df2b148b2404d9cc8a7987e8982b93fc4087ee50587.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        #cart {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #cart:hover {
+            background-color: #2980b9;
+        }
+
+        #cart-container {
+            margin-top: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 100px 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* width: 500px; */
+            align-items: center;
+            /* height: 155px; */
+        }
+        
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #checkout {
+            margin-top: 20px;
+            background-color: #27ae60;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #checkout:hover {
+            background-color: #219d53;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Your Shopping Cart</h1>
+        <a href="home.html"><button id="cart">Back to Shopping</button></a>
+    </header>
+
+    <main>
+        <div id="cart-container">
+            <h2>Your Cart</h2>
+            <div class="cart-item">
+                <span>Product 1 x 2</span>
+                <span>&#8377 5999</span>
+            </div>
+            <div class="cart-item">
+                <span>Product 2 x 1</span>
+                <span>&#8377 7999</span>
+            </div>
+            <!-- Add more cart items as needed -->
+            <button id="checkout" > <a style="text-decoration: none;color: black;" href="payment.html"> Proceed to Checkout - &#8377 13998 </a></button>
+        </div>
+    </main>
+
+    <script>
+        const cartButton = document.getElementById('cart');
+
+        cartButton.addEventListener('click', () => {
+            // Redirect back to the shopping page or implement your logic
+            alert('Redirecting to shopping page (This is a demo).');
+        });
+
+        const checkoutButton = document.getElementById('checkout');
+
+        checkoutButton.addEventListener('click', () => {
+            // Implement your checkout logic or redirect to a checkout page
+            alert('Proceeding to checkout (This is a demo).');
+        });
+    </script>
+
+</body>
+
+</html>
